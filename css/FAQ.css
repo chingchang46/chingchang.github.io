@@ -1,0 +1,72 @@
+/* 通用樣式 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    margin-top: 200px;
+    font-family: Arial, sans-serif;
+}
+
+main{
+    position: relative;
+}
+
+main h1{
+    color: #70482b;
+    margin: 200px 20% 100px 20%;
+    text-align: center;
+}
+
+main h2{
+    color: rgb(124, 124, 124);
+    margin: 0px 20% 0 20%;
+    text-align: left;
+}
+
+.QA {
+    position: relative; /* 為子元素提供定位參考 */
+    display: inline-block;
+    width: 100%; /* 調整寬度根據需求 */
+}
+
+main .QA {
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    position: relative; /* 為文字覆蓋提供定位基準 */
+    max-width: 1000px; /* 限制容器最大寬度 */
+    margin: 0 auto; /* 自動居中 */
+}
+
+.QA img {
+    width: 100%; /* 確保圖片適應容器寬度 */
+    height: auto; /* 保持圖片比例 */
+    display: block; /* 清除圖片的內建行內空間 */
+}
+
+.Ans {
+    position: absolute; /* 絕對定位文字容器 */
+    top: 50%; /* 垂直居中 */
+    left: 50%; /* 水平居中 */
+    transform: translate(-60%, -50%); /* 確保內容完全居中 transform: translate(-50%, -50%);*/
+    color: white; /* 文字顏色 */
+    font-weight: bold;
+    text-align: center; /* 文字對齊方式 */
+    padding: 10px; /* 內距調整 */
+    border-radius: 8px; /* 圓角邊框 */
+    max-width: 90%; /* 防止文字過寬 */
+}
+
+.Ans p {
+    margin: 5px 0;
+    font-size: 20px; /* 文字大小調整 */
+    line-height: 1.5; /* 提升文字可讀性 */
+}
+
+h3{
+    color: rgb(124, 124, 124);
+    margin: 0px 20% 0 20%;
+    text-align: center;
+}

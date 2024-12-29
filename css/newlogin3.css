@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0e4d7; /* 柔和的姜餅色 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    width: 110px;
+    margin-bottom: 10px;
+}
+
+.register-container {
+    background: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+label {
+    font-size: 14px;
+    color: #5e463a;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.register-container h1 {
+    color: #d2691e; /* 姜餅人棕色 */
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.register-container p {
+    color: #8B0000; /* 聖誕紅 */
+    margin-top: 10px;
+    text-align: left;
+}
+
+.register-container input, .register-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #d2691e; /* 棕色邊框 */
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none; /* 禁止縮放文字區域 */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+ .btn-next {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.btn-complete {
+    background-color: #d2691e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-complete:hover {
+    background-color: #b85818;
+}

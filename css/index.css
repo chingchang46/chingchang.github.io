@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+h2 {
+    color: rgb(134, 20, 14);
+    text-align: center;
+}
+
+p {
+    color: rgb(124, 124, 124);
+    text-align: center;
+}
+
+
+/* 讓圖片置中並排 */
+.image-container {
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 將內容水平置中 */
+    gap: 20px; /* 設定圖片間距 */
+    margin: 20px 0; /* 增加上下間距 */
+}
+
+.image-container .item {
+    text-align: center; /* 圖片與文字置中 */
+}
+
+.image-container img {
+    max-width: 200px; /* 設定圖片大小 */
+    height: auto; /* 保持圖片比例 */
+    display: block; /* 確保文字與圖片分開 */
+    margin: 0 auto; /* 圖片在容器內置中 */
+}
+
+/* 最外層的div 包起來 (滑動圖)===================================================*/
+.slideshow-container{
+    max-width: 900px;
+    position: relative;
+    margin: 0px auto;
+
+  }
+  /*按鍵設計*/
+  .pre,.next{
+    position: absolute;
+    top: 50%;
+    padding: 20px;
+    width: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+
+  }
+
+  .next{
+    right: 0px;
+  }
+
+  .pre:hover,.next:hover{
+    background-color: rgba(0, 0, 0, 0.742);
+  }
+  
+
+  /*照片動畫*/
+  .mySlides{
+    animation: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from{opacity: 0.4;}
+    to {opacity: 1;}
+  }
+  
+
+  /*圓點*/
+  .dot{
+    position: relative;
+    height: 8px;
+    width: 8px;
+    margin: 0px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+  }
+  
+  .dot:hover, .active{
+    background-color: #717171;
+  }
+/*=============================================================*/
+
+/*熱銷榜3個===============================================*/
+.hot {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    justify-content: center;
+}
+
+.hottop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 600px;
+}
+
+.hottop img {
+    transition: transform 0.5s ease, opacity 0.5s ease; /* 增加平滑的過渡效果 */
+}
+
+.hottop img.small {
+    width: 150px;
+    opacity: 0.7;
+    transform: scale(0.8); /* 使用縮放使視覺更自然 */
+}
+
+.hottop img.large {
+    width: 400px;
+    opacity: 1;
+    transform: scale(1); /* 中間圖片正常顯示 */
+}
+
+.control {
+    background-color: #eaeaea;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 17px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.control:hover {
+    background-color: #a4a4a4;
+}
+/*=============================================================*/
+

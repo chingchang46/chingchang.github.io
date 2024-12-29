@@ -1,0 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0e4d7; /* 柔和的姜餅色 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://example.com/christmas-bg.jpg'); /* 聖誕背景圖片 */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+    padding: 30px 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 300px;
+    width: 90%;
+}
+
+.login-container h1 {
+    color: #d2691e; /* 姜餅人棕色 */
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.login-container img {
+    width:110px;
+    margin-bottom: 10px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #d2691e; /* 棕色邊框 */
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+
+
+.login-container p {
+    color: #8B0000; /* 聖誕紅 */
+    margin-top: 10px;
+}
+
+button{
+    background-color: white;
+    border: none;
+}
+
+.animated-img {
+    transition: transform 0.3s ease;
+}
+
+.animated-img:hover {
+    transform: scale(1.1); /* 當鼠標懸停時，圖片會放大10% */
+}

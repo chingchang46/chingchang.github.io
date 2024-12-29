@@ -1,0 +1,29 @@
+
+* {
+    box-sizing: border-box;
+}
+
+main{
+    margin: 200px 20% 0 20%;
+}
+
+h1{
+    text-align: center;
+    color: #70482b;
+    font-weight:900;
+}
+
+h2,h3{
+    text-align: center;
+    color: #70482b;
+    font-size: 23px;
+    font-weight:900;
+}
+
+p,ul{
+    color: #926039ba;
+    font-size: 20px;
+    line-height: 1.5; /* 提升文字可讀性 */
+    font-weight: 900;
+}
+

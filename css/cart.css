@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+main{
+    margin: 150px 10% 10% 10%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #835d41;
+    margin: 0;
+    padding: 0;
+}
+
+.finish-container {
+    display: flex;
+    justify-content: flex-end; /* 內容靠右對齊 */
+    gap: 20px;
+    margin: 20px 80px 20px 0; /* 可選，增加上下間距 */
+}
+
+.finish{
+    font-weight: bold;
+    font-size: 20px; 
+    color: #fff;
+    background-color: #dfbe93;
+    width: 120px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px; /* 圓角效果 */
+}
+
+.finish:hover {
+    background-color: #c8a772; /* 滑過時背景稍微變深 */
+    cursor: pointer; /* 鼠標變為指針樣式 */
+}
+
+.finish:active {
+    background-color: #b59463; /* 點擊時背景變更深 */
+    transform: scale(0.95); /* 點擊時按鈕稍微縮小 */
+}
+
+.hello {
+    display: flex; /* 使用 Flexbox 排列 */
+    justify-content: space-between; /* 左右對齊 */
+    align-items: center; /* 垂直居中 */
+    width: 100%; /* 占據父容器的全部寬度 */
+    box-sizing: border-box; /* 包含內邊距在總寬度內 */
+}
+
+.line {
+    width: 100%; /* 分隔線寬度占據父容器 */
+    height: 2px; /* 分隔線高度 */
+    background-color: #f1dcc1; /* 分隔線顏色 */
+
+}
+
+.purchasefile {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: space-between; /* 均分每個區塊 */
+    align-items: center; /* 垂直居中 */
+    margin: 5px auto; /* 整體區塊的外邊距 */
+    width: 100%; /* 調整容器寬度 */
+    gap: 0; /* 移除額外間距 */
+}
+
+.purchasefile > div {
+    flex: 1; /* 每個區塊占等分寬度 */
+    text-align: center; /* 文字居中 */
+    padding: 5px; /* 增加內部間距 */
+    background-color: #ffffff; /* 背景色 */
+}
+
+.purchasefile1, 
+.purchasefile2, 
+.purchasefile3, 
+.purchasefile4, 
+.purchasefile5 {
+    border: none; /* 可選，區分各區塊 */
+}
+
+.three {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: space-between; /* 均分每個區塊 */
+    align-items: center; /* 垂直居中 */
+    margin: 5px auto; /* 整體區塊的外邊距 */
+    width: 100%; /* 調整容器寬度 */
+    gap: 0; /* 移除額外間距 */
+}
+
+.three > div {
+    text-align: center; /* 文字居中 */
+    padding: 5px; /* 增加內部間距 */
+    background-color: #ffffff; /* 背景色 */
+}
+
+.three1{
+    width: 5%;
+    border: none; /* 可選，區分各區塊 */
+}
+.three2{
+    width: 30%;
+    border: none; /* 可選，區分各區塊 */
+}
+.three3{
+    width: 56%;
+    border: none; /* 可選，區分各區塊 */
+}
+
+
+.purchase {
+    margin-bottom: 30px;
+    border: 3px solid #f1dcc1; /* 金棕色實線邊框 */
+    border-radius: 10px; /* 圓角效果 */
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-controls button {
+    background-color: #fff;
+    border: 3px solid #f1dcc1;
+    color: #835d41;
+    font-size: 20px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-controls span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #835d41;
+    text-align: center;
+    width: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.section {
+    background-color: #fff;
+    padding: 20px;
+    width: 48%;
+}

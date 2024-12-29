@@ -1,0 +1,398 @@
+/* 商品頁面佈局 */
+.product-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 50px;
+    max-width: 1200px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* 商品詳情 */
+.product-details {
+    text-align: left; 
+    margin-top: 120px;
+}
+
+
+/* 商品圖片 */
+.product-image img {
+    max-width: 300px;
+    height: auto;
+    margin-top:100px;
+}
+
+h2{
+    color:#624931;
+    font-weight: 900;
+}
+
+.hr1 {
+    max-width: 310px;
+    margin-left: 0;
+    border: 0; 
+    border-top: 1px solid #f1c8a8; 
+}
+
+/* 評分樣式 */
+.product-details .rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.fa-star, .fa-star-half, .fa-star-o{
+    font-size: 18px;
+    color: gold; 
+}
+
+.material-symbols-outlined {
+    font-size: 16px; 
+    color: gold;  
+}
+
+.rating-score {
+    color: rgb(200, 200, 200)
+}
+
+.review-count {
+    color: #624931
+}
+
+/* 數量選擇器 */
+.product-details .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 1px solid #f1c8a8;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: white;
+    max-width: 310px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+/* 數量選擇器中的按鈕和數量 */
+.product-details .quantity button,
+.product-details .quantity .current-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 100%;
+}
+
+/* 數量選擇器中的數字 */
+.product-details .quantity .current-quantity {
+    width: 50px;
+    text-align: center;
+    background-color: #fff;
+    height: 100%;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* 減號按鈕 */
+.product-details .quantity .minus {
+    background-color: white;
+    border-right: 1px solid #caa88d;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 100%;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* 加號按鈕 */
+.product-details .quantity .plus {
+    background-color: white;
+    border-left: 1px solid #caa88d;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 100%;
+    font-weight: 600;
+}
+
+/* 數量選擇器中的按鈕懸停效果 */
+.product-details .quantity button:hover {
+    background-color: rgb(242, 240, 238);
+}
+
+/* 按鈕容器 */
+.product-details .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* 加入購物車按鈕 */
+.product-details2 button.add-to-cart {
+    background-color: #c68b1c; 
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0;
+    width: 140px;
+    height: 40px;
+    display: flex; 
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+/* 加入購物車按鈕懸停效果 */
+.product-details2 button.add-to-cart:hover {
+    background-color: #e69500; 
+}
+
+/* 加入追蹤清單按鈕 */
+.product-details2 button.add-to-wishlist {
+    background-color: white;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    border: none;
+    width: 230px;
+}
+
+/* 追蹤清單圖標 */
+.wishlist-icon {
+    font-size: 19px;
+    color: red;
+    margin-right: 5px;
+}
+
+.tracked {
+    font-size:12px;
+    color: red; 
+}
+
+/* 商品描述和評價容器 */
+.description-reviews-toggle {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    text-align: left; 
+    margin-top: 60px;
+    gap: 300px;
+
+}
+
+.hr2{
+    max-width: 800px;
+    border-top: 1px solid #f1c8a8;
+}
+/* 商品描述和評價切換按鈕 */
+.description-reviews-toggle button {
+    border: none;
+    background: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    font-size: 20px;
+    color: #624931;
+    font-weight: 600;
+}
+
+/* 調整下邊框的位置 */
+.description-reviews-toggle button::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    border-bottom: 3px solid #f1c8a8;
+}
+
+/* 按鈕懸停效果和激活效果 */
+.description-reviews-toggle button:hover::after,
+.description-reviews-toggle button.active::after {
+    border-bottom-color: #e69500;
+}
+/* 商品描述和評價區域 */
+#product-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    margin: 50px auto; 
+    max-width: 350px; 
+}
+
+#product-description h3, 
+#product-description p {
+    text-align: left;
+    margin: 5px 0;
+}
+
+#product-description h3{
+    color: #624931;
+    text-align: center;
+}
+
+#product-description p{
+    color: #d48b03;
+    font-size: 15px;
+}
+
+/* 評分區域樣式 */
+#product-reviews {
+    display: none;
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* 評價標題 */
+.comment-quantity {
+    text-align: left;
+    margin-left: 0;
+    width: 80px;
+    height: 15px;
+    color: #624931;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* 評分概覽區域 */
+.review-summary {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 50px 0;
+}
+
+/* 左側評分星星和平均評分 */
+.left-section {
+    text-align: left;
+    margin-right: 20px;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.average-rating {
+    font-size: 18px;
+    margin: 0;
+    color: #d48b03;
+}
+
+/* 右側評分細節 */
+.right-section {
+    text-align: left;
+    flex-grow: 1;
+    color: #e4bc9b;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.rating-bar span {
+    width: 50px;
+    text-align: right;
+}
+
+
+.bar {
+    flex-grow: 1;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background-color: #e4bc9b;
+    border-radius: 1px;
+}
+
+
+/* 用戶評價區域 */
+.user-reviews {
+    text-align: left;
+    margin-top: 60px;
+}
+
+.user-reviews .review {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* 評價頭部 */
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.review-info {
+    width: 100px;
+    margin-right: 40px;
+}
+
+.username{
+    display: block;
+    margin-bottom: 5px;
+    width: 100px;
+    margin-right: 0;
+    color: #624931;
+}
+.review-date {
+    display: block;
+    margin-bottom: 5px;
+    width: 100px;
+    margin-right: 0;
+    color: #e4bc9b;
+}
+
+/* 評價內容 */
+.review-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.review-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.review p {
+    margin-top: 10px;
+    color: #d48b03;
+}
+
+
