@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>萊姆餅乾</title>
+    <style>
+        @import url(css/up_and_down.css);
+        @import url(css/simple_product.css);
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="image/薑餅出桃.png" alt="Logo">
+        </a>
+
+        <div class="links">
+            <a href="New activity.html">最新活動</a>
+            <a href="All products.html">所有商品</a>
+            <a href="FAQ.html">常見問題</a>
+            <a href="about Us.html">關於我們</a>
+        </div>
+
+        <!-- 搜尋欄 -->
+        <form class="search-bar" action="All products.html" method="get">
+            <input type="text" name="query" placeholder="搜尋商品…">
+            <button type="submit">搜尋</button>
+        </form>
+
+        <!-- 圖標區 -->
+        <div class="icons">
+            <a href="account.html" class="mdi--account"></a>
+            <a href="cart.html" class="tabler--shopping-cart"></a>
+        </div>
+    </header>
+
+    <!-- 跑馬燈容器 -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            歡迎光臨我們的店鋪！最新聖誕節活動正在進行中，快來參加吧！🎄 聖誕限定，溫暖上市！
+            特別推出聖誕節限量口味，包括胡椒雪餅、棒棒糖、以及融化在口中的提拉米蘇口味餅乾，搭配可愛包裝，是送禮或分享的最佳選擇！限時供應，錯過要等一年！
+        </div>
+    </div>
+    <main>
+        <div class="product-page">
+            <div class="product-image">
+                <img src="image/Lime_Cookie.webp" alt="萊姆餅乾">
+            </div>
+            <div class="product-details">
+                <h2>萊姆餅乾</h2>
+                <h3 style="color: #e3a270; font-weight: 500;">夏天就是要去海邊</h3><hr class="hr1">
+                <h2 class="price">NT$45</h2>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <span class="material-symbols-outlined">star_outline</span>
+                    <span class="reviews">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="rating-score">4.0分&nbsp;|</span>
+                        <span class="review-count">3個評論</span>
+                    </span>
+                </div>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="current-quantity">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <div class="product-details2">
+                    <div class="button-container">
+                        <button class="add-to-cart" onclick="addToCartAndRedirect()">加入購物車</button>
+                        <button class="add-to-wishlist" onclick="toggleWishlist(this)">
+                            <span class="wishlist-icon">♡</span> 加入追蹤清單
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 新增描述和評價切換按鈕 -->
+        <div class="description-reviews-toggle">
+            <button class="show-description" onclick="showDescription()">商品描述</button>
+            <button class="show-reviews" onclick="showReviews()">商品評價</button>
+        </div>
+        <hr class="hr2">
+        <!-- 商品描述和商品評價區域 -->
+        <div id="product-description">
+            <h3>性格外向，熱愛陽光和大海，自由自在的生活</h3><br>
+            <h3>外型</h3>
+            <p>外觀以青綠色為主，頭髮彎曲如同萊姆果皮一樣帶有光澤，穿上了淺綠色的泳衣並拿著萊姆樣式的排球</p><br>
+            <h3>口味</h3>
+            <p>製作過程中除了放入微酸的果肉以外還加入了苦澀的萊姆皮，入口時有著清爽的酸味，緊接著是清新的果香，讓人彷彿置身於熱帶海洋，充滿著夏天的活力。</p>
+        </div>
+        <div id="product-reviews" style="display:none; text-align: left;">
+            <div class="review-summary">
+                <div class="left-section">
+                    <p class="comment-quantity">3個評價</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span class="material-symbols-outlined">star_outline</span>
+                        <span class="average-rating">/4.0</span>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <div class="rating-bar">
+                        <span>5分</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 0%;"></div>
+                        </div>                    
+                        <span>0%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>4分</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 100%;"></div>
+                        </div>                    
+                        <span>100%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>3分</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 0%;"></div>
+                        </div>                    
+                        <span>0%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>2分</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 0%;"></div>
+                        </div>                    
+                        <span>0%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>1分</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 0%;"></div>
+                        </div>
+                        <span>0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 新增評價內容 -->
+            <div class="user-reviews">
+                <div class="review">
+                    <div class="review-header">
+                        <img src="image/user.png" alt="User Icon">
+                        <div class="review-info">
+                            <span class="username">XXX</span>
+                            <span class="review-date">2024/12/28</span>
+                        </div>
+                        <div class="review-content">    
+                            <div class="review-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span class="material-symbols-outlined">star_outline</span>
+                            </div>
+                            <p>這個餅乾很適合與喜歡酸的朋友分享。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <img src="image/user.png" alt="User Icon">
+                        <div class="review-info">
+                            <span class="username">XXX</span>
+                            <span class="review-date">2024/12/28</span>
+                        </div>
+                        <div class="review-content">    
+                            <div class="review-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span class="material-symbols-outlined">star_outline</span>
+                            </div>
+                            <p>酸中帶甜，讓人感覺非常清新醒腦。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <img src="image/user.png" alt="User Icon">
+                        <div class="review-info">
+                            <span class="username">XXX</span>
+                            <span class="review-date">2024/12/28</span>
+                        </div>
+                        <div class="review-content">    
+                            <div class="review-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span class="material-symbols-outlined">star_outline</span>
+                            </div>
+                            <p>外層有一層糖霜，但不會搶掉萊姆的酸香。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <br>
+        <a href="#pagehead">回頁首</a>
+        <br>
+        <div class="hello">
+            <p style="color: white;">品牌名稱｜薑餅出桃股份有限公司&nbsp;&nbsp;統編991016</p>
+            <p style="color: white;">客服專線：0920201119&nbsp;&nbsp;時間00:00～23:59</p>
+        </div>
+        <div class="hello">
+            <p style="color: white;">地址：薑餅區聖誕市糖霜路新手巷3號</p>
+            <p style="color: white;">客服信箱：cookierun@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+    </footer>
+
+    <script src="js/simple_product.js"></script>
+</body>
+</html>

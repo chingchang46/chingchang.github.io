@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <style>
+        @import url(css/index.css);
+        @import url(css/up_and_down.css);
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="image/薑餅出桃.png" alt="Logo">
+        </a>
+
+        <!-- 主選單 -->
+        <div class="menu">
+            <div class="menu-item"><a href="New activity.html">最新活動</a></div>
+            <div class="menu-item"><a href="All products.html">所有商品</a></div>
+            <div class="menu-item">
+                <a href="#">常見問題</a>
+                <div class="dropdown">
+                    <a href="FAQ.html">常見問題</a>
+                    <a href="return.html">退換貨政策</a>
+                    <a href="vip.html">會員制度</a>
+                </div>
+            </div>
+            <div class="menu-item"><a href="about Us.html">關於我們</a></div>
+        </div>
+
+        <!-- 搜尋欄 -->
+        <form class="search-bar" action="All products.html" method="get">
+            <input type="text" name="query" placeholder="搜尋商品…" />
+            <button type="submit">搜尋</button>
+        </form>
+
+        <!-- 圖標區 -->
+        <div class="icons">
+            <a href="login.html" class="mdi--account"></a>
+            <a href="cart.html" class="tabler--shopping-cart"></a>
+        </div>
+    </header>
+
+    <!-- 跑馬燈容器 -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            歡迎光臨我們的店鋪！最新聖誕節活動正在進行中，快來參加吧！🎄 聖誕限定，溫暖上市！
+            特別推出聖誕節限量口味，包括胡椒雪餅、棒棒糖、以及融化在口中的提拉米蘇口味餅乾，搭配可愛包裝，是送禮或分享的最佳選擇！限時供應，錯過要等一年！
+        </div>
+    </div>
+
+
+    <main>
+            <!-- 這裡是最外層div的容器 -->
+        <div class="slideshow-container"  id="pagehead">
+            <!-- 圖片1 的div -->
+            <div class="mySlides fade">
+                <a href="New activity1.html"><img src="image/廣告1.png" style="width:100%"/></a>
+            </div>
+    
+            <!-- 圖片2 的div -->
+            <div class="mySlides fade">
+                <a href="vip.html"><img src="image/廣告2.png" style="width:100%"/></a>
+            </div>
+    
+            <!-- 圖片3 的div -->
+            <div class="mySlides fade">
+                <a href="New activity2.html"><img src="image/廣告3.png" style="width:100%"/></a>
+            </div>
+    
+            <!-- 圖片4 的div -->
+            <div class="mySlides fade">
+                <img src="image/廣告4.png" style="width:100%"/>
+            </div>
+
+            <!-- 圖片5 的div -->
+            <div class="mySlides fade">
+                <img src="image/廣告5.jpg" style="width:100%"/>
+            </div>
+
+    
+            <!-- 按鈕 -->
+            <div class="pre" onclick="plusSlides(-1)">❮</div>
+            <div class="next" onclick="plusSlides(1)">❯</div>
+        </div>
+        <!--顯示圓點-->
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+
+
+        <h2 style="margin: 0;">熱銷榜</h2>
+        <div class="hot">
+            <button class="control left" id="left-button">&lt;</button>
+            <div class="hottop">
+                <img src="image/Pancake_Cookie.webp" alt="hottop 1" class="small">
+                <img src="image/Lime_Cookie.webp" alt="hottop 2" class="large">
+                <img src="image/Cotton_Candy_Cookie.webp" alt="hottop 3" class="small">
+            </div>
+            <button class="control right" id="right-button">&gt;</button>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+
+
+        <h2>經典款 - Classic Flavors</h2>
+        <div class="image-container">
+            <div class="item">
+                <img src="image/GingerBrave.webp" alt="Ginger Brave" />
+                <p>勇敢餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/GingerBright.webp" alt="Ginger Bright" />
+                <p>活潑餅乾</p>
+            </div>
+        </div>
+
+        <h2>水果款 - Fruit Flavors</h2>
+        <div class="image-container">
+            <div class="item">
+                <img src="image/Strawberry_Cookie.webp" alt="Ginger Strawberry" />
+                <p>草莓餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Lime_Cookie.webp" alt="Ginger Lime" />
+                <p>萊姆餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Cherry_Cookie.webp" alt="Ginger Cherry" />
+                <p>櫻桃餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Kiwi_Cookie.webp" alt="Ginger Kiwi" />
+                <p>奇異果餅乾</p>
+            </div>
+        </div>
+
+        <h2>點心款 - Dessert Flavors</h2>
+        <div class="image-container">
+            <div class="item">
+                <img src="image/Cheesecake_Cookie.webp" alt="Ginger Cheesecake" />
+                <p>起司蛋糕餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Cream_Puff_Cookie.webp" alt="Ginger Cream_Puff" />
+                <p>奶油泡芙餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Pancake_Cookie.webp" alt="Ginger Pancake" />
+                <p>鬆餅餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Popcorn_Cookie.webp" alt="Ginger Popcorn"/>
+                <p>爆米花餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Birthday_Cake_Cookie.webp" alt="Ginger Birthday_Cake" style="width: 150px; margin: 0px 20px;"/>
+                <p>生日蛋糕餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Vagabond_Cookie.webp" alt="Ginger Vagabond" style="width: 150px;" />
+                <p>梅雀果餅乾</p>
+            </div>
+        </div>
+
+        <h2>糖果款 - Candy Flavors</h2>
+        <div class="image-container">
+            <div class="item">
+                <img src="image/Gumball_Cookie.webp" alt="Ginger Gumball" />
+                <p>泡泡糖餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Sugar_Glass_Cookie.webp" alt="Ginger Sugar_Glass" style="width: 157px;" />
+                <p>糖玻璃餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Cotton_Candy_Cookie.webp" alt="Ginger Cotton_Candy" />
+                <p>棉花糖餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Okchun_Cookie.webp" alt="Ginger Okchun" style="width: 153px;" />
+                <p>王春糖餅乾</p>
+            </div>
+        </div>
+
+        <h2>飲料款 - Drinks Flavors</h2>
+        <div class="image-container">
+            <div class="item">
+                <img src="image/Soda_Cookie.webp" alt="Ginger Soda" />
+                <p>汽水餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Cream_Soda_Cookie.webp" alt="Ginger Cream_Soda" style="width: 162px;" />
+                <p>奶油蘇打餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Cherry_Cola_Cookie.webp" alt="Ginger Cherry_Cola" style="width: 200px;" />
+                <p>櫻桃可樂餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Blue_Slushy_Cookie.webp" alt="Ginger Blue_Slushy" style="width: 187px;" />
+                <p>蘇打冰沙餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Cocoa_Cookie.webp" alt="Ginger Cocoa" />
+                <p>可可餅乾</p>
+            </div>
+        </div>
+
+        <h2>巧克力款 - Chocolate Flavors</h2>
+        <div class="image-container">
+            <div class="item">
+                <img src="image/Mint_Choco_Cookie.webp" alt="Ginger Mint_Choco" />
+                <p>薄荷巧克力餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Dark_Choco_Cookie.webp" alt="Ginger Dark_Choco" />
+                <p>黑巧克力餅乾</p>
+            </div>
+        </div>
+
+        <h2>特殊款 - Special Flavors</h2>
+        <div class="image-container">
+            <div class="item">
+                <img src="image/Herb_Cookie.webp" alt="Ginger Herb" style="width: 198px;"/>
+                <p>藥草餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Squid_Ink_Cookie.webp" alt="Ginger Squid_Ink" style="width: 195px; margin: 0px 25px 0 0;" />
+                <p>墨魚餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Yogurt_Cream_Cookie.webp" alt="Ginger Yogurt_Cream" style="width: 115px; margin: 0px 25px 0 0;" />
+                <p>優格鮮奶油餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Flat_Tofu_Cookie.webp" alt="Ginger Flat_Tofu"/>
+                <p>豆皮餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Pistachio_Cookie.webp" alt="Ginger Flat_Tofu" style="width: 187px;"/>
+                <p>開心果餅乾</p>
+            </div>
+        </div>
+
+        <h2>聖誕款 - Christmas Flavors</h2>
+        <div class="image-container">
+            <div class="item">
+                <img src="image/Peppernut_Cookie.webp" alt="Ginger Peppernut" style="width: 147px; margin: 0px 38px 0 15px;" />
+                <p>胡椒雪球餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Tiramisu_Cookie.webp" alt="Ginger Tiramisu" style="width: 150px; margin: 0px 30px 0 0;" />
+                <p>提拉米蘇餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Pudding_Cookie.webp" alt="Ginger Pudding" style="width: 160px; margin: 0px 20px 0 0;" />
+                <p>布丁餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Eggnog_Cookie.webp" alt="Ginger Eggnog" />
+                <p>甜蛋飲餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Lollipop_Cookie.webp" alt="Ginger Lollipop" style="width: 155px; margin: 0px 20px 0 20px;" />
+                <p>棒棒糖餅乾</p>
+            </div>
+            <div class="item">
+                <img src="image/Stollen_Cookie.webp" alt="Ginger Stollen" style="width: 178px;" />
+                <p>史多倫麵包餅乾</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <br>
+        <a href="#pagehead">回頁首</a>
+        <br>
+        <div class="hello">
+            <p style="color: white;">品牌名稱｜薑餅出桃股份有限公司&nbsp;&nbsp;統編991016</p>
+            <p style="color: white;">客服專線：0920201119&nbsp;&nbsp;時間00:00～23:59</p>
+        </div>
+        <div class="hello">
+            <p style="color: white;">地址：薑餅區聖誕市糖霜路新手巷3號</p>
+            <p style="color: white;">客服信箱：cookierun@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+    </footer>
+
+    <script src="./js/homepage.js"></script>
+    <script src="./js/up_and_down.js"></script>
+
+</body>
+</html>

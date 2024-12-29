@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>胡椒雪球餅乾</title>
+    <style>
+        @import url(css/up_and_down.css);
+        @import url(css/simple_product.css);
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="image/薑餅出桃.png" alt="Logo">
+        </a>
+
+        <div class="links">
+            <a href="New activity.html">最新活動</a>
+            <a href="All products.html">所有商品</a>
+            <a href="FAQ.html">常見問題</a>
+            <a href="about Us.html">關於我們</a>
+        </div>
+
+        <!-- 搜尋欄 -->
+        <form class="search-bar" action="All products.html" method="get">
+            <input type="text" name="query" placeholder="搜尋商品…">
+            <button type="submit">搜尋</button>
+        </form>
+
+        <!-- 圖標區 -->
+        <div class="icons">
+            <a href="account.html" class="mdi--account"></a>
+            <a href="cart.html" class="tabler--shopping-cart"></a>
+        </div>
+    </header>
+
+    <!-- 跑馬燈容器 -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            歡迎光臨我們的店鋪！最新聖誕節活動正在進行中，快來參加吧！🎄 聖誕限定，溫暖上市！
+            特別推出聖誕節限量口味，包括胡椒雪餅、棒棒糖、以及融化在口中的提拉米蘇口味餅乾，搭配可愛包裝，是送禮或分享的最佳選擇！限時供應，錯過要等一年！
+        </div>
+    </div>
+    <main>
+        <div class="product-page">
+            <div class="product-image">
+                <img src="image/Peppernut_Cookie.webp" alt="胡椒雪球餅乾">
+            </div>
+            <div class="product-details">
+                <h2>胡椒雪球餅乾</h2>
+                <h3 style="color: #e3a270; font-weight: 500;">我真的真的好喜歡為小餅乾挑選禮物</h3><hr class="hr1">
+                <h2 class="price">NT$60</h2>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <span class="reviews">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="rating-score">5.0分&nbsp;|</span>
+                        <span class="review-count">5個評論</span>
+                    </span>
+                </div>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="current-quantity">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <div class="product-details2">
+                    <div class="button-container">
+                        <button class="add-to-cart" onclick="addToCartAndRedirect()">加入購物車</button>
+                        <button class="add-to-wishlist" onclick="toggleWishlist(this)">
+                            <span class="wishlist-icon">♡</span> 加入追蹤清單
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 新增描述和評價切換按鈕 -->
+        <div class="description-reviews-toggle">
+            <button class="show-description" onclick="showDescription()">商品描述</button>
+            <button class="show-reviews" onclick="showReviews()">商品評價</button>
+        </div>
+        <hr class="hr2">
+        <!-- 商品描述和商品評價區域 -->
+        <div id="product-description">
+            <h3>原本是為了當上聖誕老公公而就讀雪花鈴聖誕學院，即使測驗不合格仍一派輕鬆，因為她在就讀過程中已經找到真正能夠感受到幸福的事物了</h3><br>
+            <h3>外型</h3>
+            <p>奶黃色和淺棕色搭配的頭髮被紅綠相間的蝴蝶結繫成兩個小糰子，頭上戴著與髮色相同並有紅色胡椒粒的貝雷帽，身著有絨毛毛邊的紅色連衣裙，手上還拿著要去裝飾聖誕樹的彩球掛飾</p><br>
+            <h3>口味</h3>
+            <p>為打造冰涼的雪球感，餅乾經過冰箱冷藏，但卻依舊散發著薑餅的香氣和不過於乾澀的酥脆口感，濃烈的胡椒辛辣感和冰冷的糖霜在融化時的刺激，一入口時在口中同時交織，形成獨特的感官體驗，而後辛辣感消失由甜味取代，帶來多層次的味覺體驗
+            </p>
+        </div>
+        <div id="product-reviews" style="display:none; text-align: left;">
+            <div class="review-summary">
+                <div class="left-section">
+                    <p class="comment-quantity">5個評價</p>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span class="average-rating">/5.0</span>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <div class="rating-bar">
+                        <span>5分</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 100%;"></div>
+                        </div>                    
+                        <span>100%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>4分</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 0%;"></div>
+                        </div>                    
+                        <span>0%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>3分</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 0%;"></div>
+                        </div>                    
+                        <span>0%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>2分</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 0%;"></div>
+                        </div>                    
+                        <span>0%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>1分</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 0%;"></div>
+                        </div>
+                        <span>0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 新增評價內容 -->
+            <div class="user-reviews">
+                <div class="review">
+                    <div class="review-header">
+                        <img src="image/user.png" alt="User Icon">
+                        <div class="review-info">
+                            <span class="username">XXX</span>
+                            <span class="review-date">2024/12/28</span>
+                        </div>
+                        <div class="review-content">    
+                            <div class="review-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>每一口都充滿了濃郁的香料味，太好吃了！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <img src="image/user.png" alt="User Icon">
+                        <div class="review-info">
+                            <span class="username">XXX</span>
+                            <span class="review-date">2024/12/28</span>
+                        </div>
+                        <div class="review-content">    
+                            <div class="review-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>胡椒的辛香讓餅乾多了一層深度，特別是搭配熱飲更顯風味。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <img src="image/user.png" alt="User Icon">
+                        <div class="review-info">
+                            <span class="username">XXX</span>
+                            <span class="review-date">2024/12/28</span>
+                        </div>
+                        <div class="review-content">    
+                            <div class="review-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>入口即化的口感，讓人忍不住一口接一口。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <img src="image/user.png" alt="User Icon">
+                        <div class="review-info">
+                            <span class="username">XXX</span>
+                            <span class="review-date">2024/12/28</span>
+                        </div>
+                        <div class="review-content">    
+                            <div class="review-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>造型可愛，送禮自用兩相宜。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <img src="image/user.png" alt="User Icon">
+                        <div class="review-info">
+                            <span class="username">XXX</span>
+                            <span class="review-date">2024/12/28</span>
+                        </div>
+                        <div class="review-content">    
+                            <div class="review-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>香料味恰到好處，溫暖又滿足。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <br>
+        <a href="#pagehead">回頁首</a>
+        <br>
+        <div class="hello">
+            <p style="color: white;">品牌名稱｜薑餅出桃股份有限公司&nbsp;&nbsp;統編991016</p>
+            <p style="color: white;">客服專線：0920201119&nbsp;&nbsp;時間00:00～23:59</p>
+        </div>
+        <div class="hello">
+            <p style="color: white;">地址：薑餅區聖誕市糖霜路新手巷3號</p>
+            <p style="color: white;">客服信箱：cookierun@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+    </footer>
+
+    <script src="js/simple_product.js"></script>
+</body>
+</html>

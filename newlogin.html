@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊會員</title>
+    <style>
+        @import url(css/newlogin.css);
+        @import url(css/login.css);
+    </style>
+</head>
+<body>
+    
+    <div class="register-container">
+        <img src="image/a2.png" alt="薑餅人圖案">
+        <h1>註冊會員</h1>
+        <form>
+            <!-- 電話輸入 -->
+            <div class="form-group">
+                <label for="phone">電話號碼</label>
+                <input type="tel" id="phone" placeholder="0912 345 678" required>
+            </div>
+
+            <!-- 電郵輸入 -->
+            <div class="form-group">
+                <label for="email">電郵</label>
+                <input type="email" id="email" placeholder="your-email@example.com" required>
+            </div>
+
+            <!-- 隱私政策和選項 -->
+            <div class="form-checkbox">
+                <label>
+                    <input type="checkbox">
+                    我願意接收薑餅出桃的最新優惠消息及服務推廣相關資訊
+                </label>
+            </div>
+            <div class="form-checkbox">
+                <label>
+                    <input type="checkbox" required>
+                    我同意網站服務條款及隱私權政策
+                </label>
+            </div>
+
+            <!-- 註冊按鈕 -->
+            <button type="submit" class="btn-next" onclick="location.href='newlogin2.html';">下一步</button>
+        </form>
+    </div>
+</body>
+</html>
+

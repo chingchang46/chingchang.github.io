@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>account</title>
+    <style>
+        @import url(css/account.css);
+        @import url(css/up_and_down.css);
+    </style>
+</head>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="image/薑餅出桃.png" alt="Logo">
+        </a>
+
+        <!-- 主選單 -->
+        <div class="menu">
+            <div class="menu-item"><a href="New activity.html">最新活動</a></div>
+            <div class="menu-item"><a href="All products.html">所有商品</a></div>
+            <div class="menu-item">
+                <a href="#">常見問題</a>
+                <div class="dropdown">
+                    <a href="FAQ.html">常見問題</a>
+                    <a href="return.html">退換貨政策</a>
+                    <a href="vip.html">會員制度</a>
+                </div>
+            </div>
+            <div class="menu-item"><a href="about Us.html">關於我們</a></div>
+        </div>
+
+        <!-- 搜尋欄 -->
+        <form class="search-bar" action="All products.html" method="get">
+            <input type="text" name="query" placeholder="搜尋商品…" />
+            <button type="submit">搜尋</button>
+        </form>
+
+        <!-- 圖標區 -->
+        <div class="icons">
+            <a href="account.html" class="mdi--account"></a>
+            <a href="cart.html" class="tabler--shopping-cart"></a>
+        </div>
+    </header>
+
+    <!-- 跑馬燈容器 -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            歡迎光臨我們的店鋪！最新聖誕節活動正在進行中，快來參加吧！🎄 聖誕限定，溫暖上市！
+            特別推出聖誕節限量口味，包括胡椒雪餅、棒棒糖、以及融化在口中的提拉米蘇口味餅乾，搭配可愛包裝，是送禮或分享的最佳選擇！限時供應，錯過要等一年！
+        </div>
+    </div>
+
+    <main>
+        <div class="hello" id="pagehead" style="padding: 10px 10%;">
+            <h2>XXX您好</h2>
+
+            <!-- 第一個彈跳視窗 -->
+            <h2><a href="#" class="link" id="open-change" style="text-decoration: none; color: #835d41;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;會員編輯</a></h2>
+            <div id="change" class="change">
+                <div class="change-content">
+                    <span class="close-button" id="close-change">&times;</span>
+                    <h2 style="color: #835d41;">會員資料</h2>
+                    <br>
+                    
+                    <form id="edit-member-form" class="form1">
+                        <label for="name" style="color: #835d41;">姓名:</label>
+                        <input type="text" id="name" name="name" value="XXX" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;"/>
+                    
+                        <label for="email" style="color: #835d41;">郵電:</label>
+                        <input type="email" id="email" name="email" value="XXX001100@gmail.com" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;"/>
+                    
+                        <label for="phone" style="color: #835d41;">電話:</label>
+                        <input type="tel" id="phone" name="phone" value="0912345678" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;"/>
+                    
+                        <label for="birthday" style="color: #835d41;">生日:</label>
+                        <input type="date" id="birthday" name="birthday" value="2000-08-07" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;"/>
+                    
+                        <br>
+                        <button type="button" id="saveButton" style="background-color: #835d41; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">修改</button>
+                    </form>
+                    <div id="result" style="margin-top: 20px; color: #835d41;"></div>
+                </div>
+            </div>
+
+            <a href="index.html">
+                <h2>會員登出</h2>
+            </a>
+        </div>
+        
+
+        <div class="member-center">
+            <!-- Tab Navigation -->
+            <div class="tabs">
+                <button class="tab active" data-tab="personal-info">個人資訊</button>
+                <button class="tab" data-tab="store-credit">商店購物金</button>
+                <button class="tab" data-tab="coupons">商店優惠券</button>
+                <button class="tab" data-tab="purchase_history">歷史消費記錄</button>
+                <button class="tab" data-tab="review_history">歷史評價記錄</button>
+                <button class="tab" data-tab="follow_list">追蹤清單</button>
+            </div>
+
+            <!--info-->
+            <div class="info">
+                <div class="client">
+                    <img src="image/client.png" alt="client Picture" class="client-pic" />
+                    <h2>XXX</h2>
+                    <p>薑餅新手</p>
+                </div>
+                
+            
+                <!-- Main Content -->
+                <div class="content">
+                    <!-- Order Tracking Section -->
+                    <div class="order-tracking">
+                        <h3 style="margin: 10px 0 20px 20px;">訂單追蹤</h3>
+                        <div class="steps">
+                            <!-- 訂單已確認 -->
+                            <div class="step">
+                                <i class="mynaui--file-text" style="color: #835d41;"></i>
+                                <p>訂單已確認</p>
+                            </div>
+                            <div class="tabler--arrow-narrow-right-dashed"></div>
+                        
+                            <!-- 待出貨 -->
+                            <div class="step">
+                                <i class="mynaui--store" style="color: #835d41;"></i>
+                                <p>待出貨</p>
+                            </div>
+                            <div class="tabler--arrow-narrow-right-dashed"></div>
+                        
+                            <!-- 待收貨 -->
+                            <div class="step">
+                                <i class="mynaui--truck" style="color: #835d41;"></i>
+                                <p>待收貨</p>
+                            </div>
+                            <div class="tabler--arrow-narrow-right-dashed"></div>
+                        
+                            <!-- 退/換貨 -->
+                            <div class="step">
+                                <i class="mynaui--swatches"></i>
+                                <p>退/換貨</p>
+                            </div>
+                            <div class="tabler--arrow-narrow-right-dashed"></div>
+                        
+                            <!-- 訂單已完成 -->
+                            <div class="step">
+                                <i class="mynaui--file-check"></i>
+                                <p>訂單已完成</p>
+                            </div>
+                            <div class="tabler--arrow-narrow-right-dashed"></div>
+                        
+                            <!-- 評價 -->
+                            <div class="step">
+                                <i class="stash--star"></i>
+                                <p>評價</p>
+                            </div>
+                        </div>                    
+                    </div>
+            
+                    <div class="membership-container">
+                        <!-- Membership Upgrade Section -->
+                        <div class="membership-upgrade">
+                            <p>⭐️&nbsp;升級至薑餅匠人&nbsp;&nbsp;&nbsp;&nbsp;12 個月內累積消費金額達 NT$1000 即可升級。</p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="link" id="open-modal">查看所有會員等級規則</a>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        <!-- Second Modal -->
+                        <a href="#" class="link" id="open-modal"></a>
+                        <div id="modal" class="modal">
+                            <div class="modal-content">
+                                <span class="close-button" id="close-modal">&times;</span>
+                                <h2 style="color: #835d41;">薑餅出桃會員等級規則</h2>
+                                <p style="color: #dfbe93;">會籍期效內若沒達成續會條件，將會自動降級</p>
+                                <br>
+                                <h2 style="color: #835d41;">薑餅匠人</h2>
+                                <p style="color: #dfbe93;">本階升級條件 :12 個月內累積消費額達 NT$1000 即可升級</p>
+                                <p style="color: #dfbe93;">有效期限 :12 個月</p>
+                                <p style="color: #dfbe93;">續會條件 :會籍效期12個月內累積消費額達 NT$1000</p>
+                                <br>
+                                <h2 style="color: #835d41;">薑餅大師</h2>
+                                <p style="color: #dfbe93;">本階升級條件 :12 個月內累積消費額達 NT$2500 即可升級</p>
+                                <p style="color: #dfbe93;">有效期限 :12 個月</p>
+                                <p style="color: #dfbe93;">續會條件 :會籍效期12個月內累積消費額達 NT$2500</p>
+                            </div>
+                        </div>
+
+                        <!-- Total Spending Section -->
+                        <div class="spending-summary">
+                            <h3 style="margin-bottom: 0;">🚩12 個月內累積消費額</h3>
+                            <div class="hello" style="padding: 15px 0% 0px 0%;">
+                                <p>NT$0</p>
+                                <p>差 NT$1000 升級</p>
+                            </div>
+                            <div class="bar"></div>
+                            <p class="note">自動更新積分顯示並完成所需消費的目標金額，若超出消費或在期限內未完成將無法升級。</p>
+                        </div>
+                    </div>
+
+
+                    <div class="membership-container">
+                        <!-- Membership Upgrade Section -->
+                        <div class="membership-1">
+                            <h2>會員資料</h2>
+                            <p id="memberName"><strong>姓名:</strong> XXX</p>
+                            <p id="memberEmail"><strong>郵電:</strong> XXX001100@gmail.com</p>
+                            <p id="memberPhone"><strong>電話:</strong> 0912345678</p>
+                            <p id="memberBirthday"><strong>生日:</strong> 2000-08-07</p>
+                        </div>
+                        
+
+                        <!-- Total Spending Section -->
+                        <div class="membership-2">
+                            <h2>送貨與付款資料</h2>
+                            <p id="memberName"><strong>收件人姓名:</strong> XXX</p>
+                            <p id="memberPhone"><strong>收件人電話:</strong> 0912345678</p>
+                            <p ><strong>收貨地址:&nbsp;&nbsp;&nbsp;&nbsp;</strong> XX市XX區XXX路XX號</p>
+                            <br>
+                            <div style="text-align: left;">
+                                <a href="#" class="link" id="open-card">新增信用卡</a>
+                            </div>
+
+                            <!-- 彈跳視窗的結構 -->
+                            <div id="card" class="modal">
+                                <div class="modal-content">
+                                    <span class="close-button">&times;</span>
+                                    <h2 style="color: #835d41;">新增信用卡資料</h2>
+                                    <form id="edit-member-form" class="form1">
+                                        <label for="card-number" style="color: #835d41;">卡號:</label>
+                                        <input type="text" id="card-number" name="card-number" spellcheck="false" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;"/>
+
+                                        <label for="cardholder-name" style="color: #835d41;">持卡人姓名:</label>
+                                        <input type="text" id="cardholder-name" name="cardholder-name" spellcheck="false" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;"/>
+
+                                        <label for="expiry-date" style="color: #835d41;">有效期:</label>
+                                        <input type="text" id="expiry-date" name="expiry-date" spellcheck="false" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;"/>
+
+                                        <label for="security-code" style="color: #835d41;">安全碼:</label>
+                                        <input type="text" id="security-code" name="security-code" spellcheck="false" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;"/>
+
+                                        <br>
+                                        <button type="button" id="confirmButton" style="background-color: #835d41; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">確認</button>
+                                    </form>
+                                    <div id="result" style="margin-top: 20px; color: #835d41;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+                    <div class="purchase">
+                        <h2 style="color: #d69f5c; margin: 10px;">2024/12/25</h2>
+                        <div class="line"></div>
+                        <div class="purchasefile">
+                            <div class="purchasefile1">
+                                <img src="image/GingerBrave.webp" alt="Ginger Brave" style="width: 200px;" class="product-image" />
+                            </div>
+                            <div class="purchasefile2">
+                                <br>
+                                <h2 class="product-name" style="color: #835d41; font-weight: bold;">勇敢餅乾&nbsp;&nbsp;&nbsp;&nbsp;X2</h2>
+                                <h2 class="product-remark" style="color: #dfbe93; font-weight: bold;">備註：無 </h2>
+                                <h2 class="product-remark" style="color: #835d41; font-weight: bold; text-align: right; margin: 0;">$60</h2>
+                                <h2 style="display: flex; color: #835d41;">外型&nbsp;&nbsp;
+                                    <div class="star" id="star-rating1">
+                                        <!-- 找到所有的icon，並設立一個data-index，用來判斷點擊的是哪一個星星 -->
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        width="40"
+                                        data-index="1"
+                                        class="star-icon"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="2"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="3"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="4"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="5"
+                                        width="40"></iconify-icon>
+                                    </div>
+                                </h2>
+                                <h2 style="display: flex; color: #835d41;">價格&nbsp;&nbsp;
+                                    <div class="star" id="star-rating2">
+                                        <!-- 找到所有的icon，並設立一個data-index，用來判斷點擊的是哪一個星星 -->
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        width="40"
+                                        data-index="1"
+                                        class="star-icon"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="2"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="3"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="4"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="5"
+                                        width="40"></iconify-icon>
+                                    </div>
+                                </h2>
+                                <h2 style="display: flex; color: #835d41;">味道&nbsp;&nbsp;
+                                    <div class="star" id="star-rating3">
+                                        <!-- 找到所有的icon，並設立一個data-index，用來判斷點擊的是哪一個星星 -->
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        width="40"
+                                        data-index="1"
+                                        class="star-icon"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="2"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="3"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="4"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="5"
+                                        width="40"></iconify-icon>
+                                    </div>
+                                </h2>
+
+                                <h2 style="color: #835d41; display: none;">評論 
+                                    <input class="purchase" style="color: #835d41; border: #d69f5c solid 3px; width: 40%; min-height: 20%;"></input>
+                                </h2>
+
+                            </div>
+                        </div>
+                        
+                        <div class="purchasefile">
+                            <div class="purchasefile1">
+                                <img src="image/GingerBright.webp" alt="Ginger Brave" style="width: 200px;" class="product-image"/>
+                            </div>
+                            <div class="purchasefile2">
+                                <br>
+                                <h2 class="product-name" style="color: #835d41; font-weight: bold;">活潑餅乾&nbsp;&nbsp;&nbsp;&nbsp;X1</h2>
+                                <h2 class="product-remark" style="color: #dfbe93; font-weight: bold;">備註：無 </h2>
+                                <h2 class="product-remark" style="color: #835d41; font-weight: bold; text-align: right; margin: 0;">$30</h2>
+                                <h2 style="display: flex; color: #835d41;">外型&nbsp;&nbsp;
+                                    <div class="star" id="star-rating1">
+                                        <!-- 找到所有的icon，並設立一個data-index，用來判斷點擊的是哪一個星星 -->
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        width="40"
+                                        data-index="1"
+                                        class="star-icon"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="2"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="3"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="4"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="5"
+                                        width="40"></iconify-icon>
+                                    </div>
+                                </h2>
+                                <h2 style="display: flex; color: #835d41;">價格&nbsp;&nbsp;
+                                    <div class="star" id="star-rating2">
+                                        <!-- 找到所有的icon，並設立一個data-index，用來判斷點擊的是哪一個星星 -->
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        width="40"
+                                        data-index="1"
+                                        class="star-icon"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="2"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="3"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="4"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="5"
+                                        width="40"></iconify-icon>
+                                    </div>
+                                </h2>
+                                <h2 style="display: flex; color: #835d41;">味道&nbsp;&nbsp;
+                                    <div class="star" id="star-rating3">
+                                        <!-- 找到所有的icon，並設立一個data-index，用來判斷點擊的是哪一個星星 -->
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        width="40"
+                                        data-index="1"
+                                        class="star-icon"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="2"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="3"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="4"
+                                        width="40"></iconify-icon>
+                                        <iconify-icon
+                                        icon="material-symbols:star-outline"
+                                        class="star-icon"
+                                        data-index="5"
+                                        width="40"></iconify-icon>
+                                    </div>
+                                </h2>
+
+                                <h2 style="color: #835d41; ">評論 
+                                    <input class="purchase" style="color: #835d41; border: #d69f5c solid 3px; width: 40%; min-height: 20%;"></input>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div>
+                            <h2 class="product-remark" style="color: #835d41; font-weight: bold; text-align: right; margin-right: 102px;">訂單金額：$90</h2>
+                        </div>
+                        <div class="finish-container">
+                            <button class="return">退/換貨</button>
+                            <button class="finish">完成訂單</button>
+                            <div id="button-container"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!--credit-->
+            <div class="credit" style="display: none;">
+                <h2>購物金紀錄</h2>
+                <div class="order-tracking">
+                    <div class="purchasefile">
+                        <div class="purchasefile1" style="width: 15%;">
+                            <img src="image/喇叭.png" alt="喇叭" style="width: 100px; margin: 20px;" class="product-image"/>
+                        </div>
+                        <div class="purchasefile2">
+                            <h2 style="color: #d69f5c; font-weight: bold;">現有購物金</h2>
+                            <h1 style="color: #835d41; font-weight: bold;">$30</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="five">
+                    <div class="five1">
+                        <h2 style="color: #835d41;">獲取日期</h2>
+                    </div>
+                    <div class="five2">
+                        <h2 style="color: #835d41;">購物金項目</h2>
+                    </div>
+                    <div class="five3">
+                        <h2 style="color: #835d41;">購物金款項</h2>
+                    </div>
+                    <div class="five4">
+                        <h2 style="color: #835d41;">到期日</h2>
+                    </div>
+                    <div class="five5">
+                        <h2 style="color: #835d41;">購物金餘額</h2>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="five">
+                    <div class="five1">
+                        <h2 style="color: #835d41;">2024/12/25</h2>
+                    </div>
+                    <div class="five2">
+                        <h2 style="color: #835d41;">新加入會員購物</h2>
+                    </div>
+                    <div class="five3">
+                        <h2 style="color: #835d41;">$30</h2>
+                    </div>
+                    <div class="five4">
+                        <h2 style="color: #835d41;">2025/01/25</h2>
+                    </div>
+                    <div class="five5">
+                        <h2 style="color: #835d41;">$30</h2>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <br>
+                <br>
+
+            </div> 
+
+            <!--coupons-->
+            <div class="coupons" style="display: none;">
+                <div class="hello" style="padding: 0; margin-bottom: 10px;">
+                    <h2>折價券</h2>
+                    <div>
+                        <input type="text" id="coupons" name="coupons" placeholder="輸入優惠券代碼" style="min-width: 20%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #dfbe93;"/>
+                        <button class="get-button">領取</button>
+                    </div>
+                </div>
+                <div class="order-tracking" id="tracking">
+                    <div class="purchasefile" id="purchaseFile">
+                        <div class="purchasefile1" style="width: 20%;">
+                            <img src="image/coupons.png" alt="coupons" id="coupons" style="width: 200px; height: auto; margin: 10px 30px 10px 70px; display: block;" class="product-image"/>
+                            <img src="image/coupons2.png" alt="coupons2" id="coupons2" style="width: 200px; height: auto; margin: 10px 30px 10px 70px; display: none;" class="product-image"/>
+                        </div>
+                        <div class="purchasefile2" id="purchaseFile2">
+                            <div class="hello" style="padding: 0; margin-top: 20px;">
+                                <div>
+                                    <h2 style="color: #835d41; font-weight: bold;">單筆訂單8折優惠</h2>
+                                    <h2 style="color: #835d41;">低銷 $0</h2>
+                                    <p style="color: #dfbe93; font-weight: bold;">會員生日禮</p>
+                                    <p style="color: #dfbe93; font-weight: bold;">有效期限：2025/03/25</p>
+                                </div>
+                                <div class="button2">
+                                    <button class="use-button" id="useButton">使用</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+            </div> 
+
+
+            <!--purchase_history-->
+            <div class="purchase_history" style="display: none;">
+                <h2 style="color: #835d41;">歷史消費</h2>
+                <div class="purchase">
+                    <h2 style="color: #d69f5c; margin: 10px;">2024/12/25</h2>
+                    <div class="line"></div>
+                    <div class="purchasefile">
+                        <div class="purchasefile1">
+                            <img src="image/GingerBrave.webp" alt="Ginger Brave" style="width: 200px;" class="product-image" />
+                        </div>
+                        <div class="purchasefile2">
+                            <br>
+                            <h2 style="color: #835d41; font-weight: bold;">勇敢餅乾&nbsp;&nbsp;&nbsp;&nbsp;X2</h2>
+                            <h2 style="color: #dfbe93; font-weight: bold;">備註：無 </h2>
+                            <h2 style="color: #835d41; font-weight: bold; text-align: right; margin: 0;">$60</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="purchasefile">
+                        <div class="purchasefile1">
+                            <img src="image/GingerBright.webp" alt="Ginger Brave" style="width: 200px;" class="product-image"/>
+                        </div>
+                        <div class="purchasefile2">
+                            <br>
+                            <h2 style="color: #835d41; font-weight: bold;">活潑餅乾&nbsp;&nbsp;&nbsp;&nbsp;X1</h2>
+                            <h2 style="color: #dfbe93; font-weight: bold;">備註：無 </h2>
+                            <h2 style="color: #835d41; font-weight: bold; text-align: right; margin: 0;">$30</h2>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
+            <!--review_history-->
+            <div class="review_history" style="display: none;">
+                <h2 style="color: #835d41;">歷史評價</h2>
+                <div class="purchase">
+                    <h2 style="color: #d69f5c; margin: 10px;">2024/12/25</h2>
+                    <div class="line"></div>
+                    <div class="purchasefile">
+                        <div class="purchasefile1">
+                            <img src="image/GingerBrave.webp" alt="Ginger Brave" style="width: 200px;" class="product-image" />
+                        </div>
+                        <div class="purchasefile2">
+                            <br>
+                            <h2 class="product-name" style="color: #835d41; font-weight: bold;">勇敢餅乾&nbsp;&nbsp;&nbsp;&nbsp;X2</h2>
+                            <h2 class="product-remark" style="color: #dfbe93; font-weight: bold;">備註：無 </h2>
+                            
+                            <!-- 外型 -->
+                            <h2 style="display: flex; color: #835d41;">外型&nbsp;&nbsp;
+                                <div class="star-rating">
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star-outline" class="star-icon"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star-outline" class="star-icon"></iconify-icon>
+                                </div>
+                            </h2>
+                            <!-- 價格 -->
+                            <h2 style="display: flex; color: #835d41;">價格&nbsp;&nbsp;
+                                <div class="star-rating">
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                </div>
+                            </h2>
+                            <!-- 味道 -->
+                            <h2 style="display: flex; color: #835d41;">味道&nbsp;&nbsp;
+                                <div class="star-rating">
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star-outline" class="star-icon"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star-outline" class="star-icon"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star-outline" class="star-icon"></iconify-icon>
+                                </div>
+                            </h2>
+
+                            <h2 style="color: #835d41;">評論</h2>
+                            <h2 class="purchase" style="color: #f1dcc1; border: #d69f5c solid 3px; max-width: 40%; min-height: 20%;">價格便宜，但口味單調</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="purchasefile">
+                        <div class="purchasefile1">
+                            <img src="image/GingerBright.webp" alt="Ginger Bright" style="width: 200px;" class="product-image" />
+                        </div>
+                        <div class="purchasefile2">
+                            <br>
+                            <h2 class="product-name" style="color: #835d41; font-weight: bold;">活潑餅乾&nbsp;&nbsp;&nbsp;&nbsp;X1</h2>
+                            <h2 class="product-remark" style="color: #dfbe93; font-weight: bold;">備註：無 </h2>
+                            
+                            <!-- 外型 -->
+                            <h2 style="display: flex; color: #835d41;">外型&nbsp;&nbsp;
+                                <div class="star-rating">
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star-outline" class="star-icon"></iconify-icon>
+                                </div>
+                            </h2>
+                            <!-- 價格 -->
+                            <h2 style="display: flex; color: #835d41;">價格&nbsp;&nbsp;
+                                <div class="star-rating">
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                </div>
+                            </h2>
+                            <!-- 味道 -->
+                            <h2 style="display: flex; color: #835d41;">味道&nbsp;&nbsp;
+                                <div class="star-rating">
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star" class="star-icon filled"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star-outline" class="star-icon"></iconify-icon>
+                                    <iconify-icon icon="material-symbols:star-outline" class="star-icon"></iconify-icon>
+                                </div>
+                            </h2>
+
+                            <h2 style="color: #835d41;">評論</h2>
+                            <h2 class="purchase" style="color: #f1dcc1; border: #d69f5c solid 3px; max-width: 40%; min-height: 20%;">物美價廉，CP值高</h2>
+
+                        </div>
+                    </div>
+                
+                    
+                                         
+  
+                </div>
+            </div>
+
+
+            <!--follow-->
+            <div class="follow_list" style="display: none;">
+                <h2 style="color: #835d41;">追蹤清單</h2>
+                <div class="image-gallery">
+                    <div class="item">
+                        <img src="image/GingerBrave.webp" alt="Ginger Brave">
+                        <p>勇敢餅乾</p>
+                        <span class="price">NT$30</span>
+                    </div>
+                    <div class="item">
+                        <img src="image/GingerBright.webp" alt="Ginger Bright">
+                        <p>活潑餅乾</p>
+                        <span class="price">NT$30</span>
+                    </div>
+                    <div class="item">
+                        <img src="image/Lime_Cookie.webp" alt="Ginger Lime">
+                        <p>萊姆餅乾</p>
+                        <span class="price">NT$45</span>
+                    </div>
+                </div>
+            </div>
+            
+    </main>
+
+    <footer>
+        <br>
+        <a href="#pagehead">回頁首</a>
+        <br>
+        <div class="hello">
+            <p style="color: white;">品牌名稱｜薑餅出桃股份有限公司&nbsp;&nbsp;統編991016</p>
+            <p style="color: white;">客服專線：0920201119&nbsp;&nbsp;時間00:00～23:59</p>
+        </div>
+        <div class="hello">
+            <p style="color: white;">地址：薑餅區聖誕市糖霜路新手巷3號</p>
+            <p style="color: white;">客服信箱：cookierun@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+    </footer>
+    <script src="./js/account.js"></script>
+</body>
+</html>

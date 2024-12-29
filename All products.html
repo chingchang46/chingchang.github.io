@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All products2</title>
+    <style>
+        @import url(css/All_products.css);
+        @import url(css/up_and_down.css);
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="image/薑餅出桃.png" alt="Logo">
+        </a>
+
+        <!-- 主選單 -->
+        <div class="menu">
+            <div class="menu-item"><a href="New activity.html">最新活動</a></div>
+            <div class="menu-item"><a href="All products.html">所有商品</a></div>
+            <div class="menu-item">
+                <a href="#">常見問題</a>
+                <div class="dropdown">
+                    <a href="FAQ.html">常見問題</a>
+                    <a href="return.html">退換貨政策</a>
+                    <a href="vip.html">會員制度</a>
+                </div>
+            </div>
+            <div class="menu-item"><a href="about Us.html">關於我們</a></div>
+        </div>
+
+        <!-- 搜尋欄 -->
+        <form class="search-bar" action="All products.html" method="get">
+            <input type="text" name="query" placeholder="搜尋商品…" />
+            <button type="submit">搜尋</button>
+        </form>
+
+        <!-- 圖標區 -->
+        <div class="icons">
+            <a href="login.html" class="mdi--account"></a>
+            <a href="cart.html" class="tabler--shopping-cart"></a>
+        </div>
+    </header>
+
+    <!-- 跑馬燈容器 -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            歡迎光臨我們的店鋪！最新聖誕節活動正在進行中，快來參加吧！🎄 聖誕限定，溫暖上市！
+            特別推出聖誕節限量口味，包括胡椒雪餅、棒棒糖、以及融化在口中的提拉米蘇口味餅乾，搭配可愛包裝，是送禮或分享的最佳選擇！限時供應，錯過要等一年！
+        </div>
+    </div>
+
+    
+
+    <!-- 整個頁面的容器 -->
+    <div class="container"  id="pagehead">
+
+
+
+        <!-- 左側選單 -->
+        <aside class="sidebar">
+            <h2>全部商品</h2>
+            <button id="all">所有商品</button>
+            <button id="festival-limited">節日限定</button>
+            <button id="Classic Flavors">經典款</button>
+            <button id="Fruit Flavors">水果款</button>
+            <button id="Dessert Flavors">點心款</button>
+            <button id="Candy Flavors">糖果款</button>
+            <button id="Drinks Flavors">飲料款</button>
+            <button id="Chocolate Flavors">巧克力款</button>
+            <button id="Special Flavors">特殊款</button>
+        </aside>
+        
+        <!-- 右側圖片區域 -->
+            <!-- 排序選單容器 -->
+            <div class="dropdown-container">
+                <label for="sort-options"></label>
+                <select id="sort-options">
+                    <option value="" disabled selected>商品排序</option>
+                    <option value="newest">上架時間：由新到舊</option>
+                    <option value="oldest">上架時間：由舊到新</option>
+                    <option value="price-high">價格：由高至低</option>
+                    <option value="price-low">價格：由低至高</option>
+                </select>
+            </div>
+
+        <main class="image-gallery">
+            <div class="item" flavors-classic="true" data-date="2016-09-26" onclick="goToProductPage('GingerBrave.html')">
+                <img class="default" src="image/GingerBrave.webp" alt="Ginger Brave">
+                <img class="hover" src="image/GingerBrave2.webp" alt="Ginger Brave2">
+                <p>勇敢餅乾</p>
+                <span class="price">NT$30</span>
+            </div>
+            <div class="item" flavors-classic="true" data-date="2016-09-26" onclick="goToProductPage('GingerBright.html')">
+                <img class="default" src="image/GingerBright.webp" alt="Ginger Bright">
+                <img class="hover" src="image/GingerBright2.webp" alt="Ginger Bright2">
+                <p>活潑餅乾</p>
+                <span class="price">NT$30</span>
+            </div>
+            <div class="item" flavors-fruit="true" data-date="2016-09-26" onclick="goToProductPage('Strawberry_Cookie.html')">
+                <img class="default" src="image/Strawberry_Cookie.webp" alt="Ginger Strawberry">
+                <img class="hover" src="image/Strawberry_Cookie2.webp" alt="Ginger Strawberry2">
+                <p>草莓餅乾</p>
+                <span class="price">NT$40</span>
+            </div>
+            <!-- 下一行 -->
+            <div class="item" flavors-fruit="true" data-date="2018-08-16" onclick="goToProductPage('Lime_Cookie.html')">
+                <img class="default" src="image/Lime_Cookie.webp" alt="Ginger Lime">
+                <img class="hover" src="image/Lime_Cookie2.webp" alt="Ginger Lime2">
+                <p>萊姆餅乾</p>
+                <span class="price">NT$45</span>
+            </div>
+            <div class="item" flavors-fruit="true" data-date="2016-09-26" onclick="goToProductPage('Cherry_Cookie.html')">
+                <img class="default" src="image/Cherry_Cookie.webp" alt="Ginger Cherry" />
+                <img class="hover" src="image/Cherry_Cookie2.webp" alt="Ginger Cherry2" />
+                <p>櫻桃餅乾</p>
+                <span class="price">NT$45</span>
+            </div>
+            <div class="item" flavors-fruit="true" data-date="2016-11-30" onclick="goToProductPage('Kiwi_Cookie.html')">
+                <img class="default" src="image/Kiwi_Cookie.webp" alt="Ginger Kiwi" />
+                <img class="hover" src="image/Kiwi_Cookie2.webp" alt="Ginger Kiwi2" />
+                <p>奇異果餅乾</p>
+                <span class="price">NT$45</span>
+            </div>
+            <!-- 下一行 -->
+            <div class="item" flavors-dessert="true" data-date="2016-10-24" onclick="goToProductPage('Cheesecake_Cookie.html')">
+                <img class="default" src="image/Cheesecake_Cookie.webp" alt="Ginger Cheesecake" />
+                <img class="hover" src="image/Cheesecake_Cookie2.webp" alt="Ginger Cheesecake2" />
+                <p>起司蛋糕餅乾</p>
+                <span class="price">NT$50</span>
+            </div>
+            <div class="item" flavors-dessert="true" data-date="2016-11-30" onclick="goToProductPage('Cream_Puff_Cookie.html')">
+                <img class="default" src="image/Cream_Puff_Cookie.webp" alt="Ginger Cream_Puff" />
+                <img class="hover" src="image/Cream_Puff_Cookie2.webp" alt="Ginger Cream_Puff2" />
+                <p>奶油泡芙餅乾</p>
+                <span class="price">NT$45</span>
+            </div>
+            <div class="item" flavors-dessert="true" data-date="2016-11-30" onclick="goToProductPage('Pancake_Cookie.html')">
+                <img class="default" src="image/Pancake_Cookie.webp" alt="Ginger Pancake" />
+                <img class="hover" src="image/Pancake_Cookie2.webp" alt="Ginger Pancake2" />
+                <p>鬆餅餅乾</p>
+                <span class="price">NT$45</span>
+            </div>
+            <!-- 下一行 -->
+            <div class="item" flavors-dessert="true" data-date="2016-09-26" onclick="goToProductPage('Popcorn_Cookie.html')">
+                <img class="default" src="image/Popcorn_Cookie.webp" alt="Ginger Popcorn"/>
+                <img class="hover" src="image/Popcorn_Cookie2.webp" alt="Ginger Popcorn2"/>
+                <p>爆米花餅乾</p>
+                <span class="price">NT$40</span>
+            </div>
+            <div class="item" flavors-dessert="true" data-date="2019-10-23" onclick="goToProductPage('Birthday_Cake_Cookie.html')">
+                <img class="default" src="image/Birthday_Cake_Cookie.webp" alt="Ginger Birthday_Cake"/>
+                <img class="hover" src="image/Birthday_Cake_Cookie2.webp" alt="Ginger Birthday_Cake2"/>
+                <p>生日蛋糕餅乾</p>
+                <span class="price">NT$50</span>
+            </div>
+            <div class="item" flavors-dessert="true" data-date="2022-08-29" onclick="goToProductPage('Vagabond_Cookie.html')">
+                <img class="default" src="image/Vagabond_Cookie.webp" alt="Ginger Vagabond"/>
+                <img class="hover" src="image/Vagabond_Cookie2.webp" alt="Ginger Vagabond2"/>
+                <p>梅雀果餅乾</p>
+                <span class="price">NT$55</span>
+            </div>
+            <!-- 下一行 -->
+            <div class="item" flavors-candy="true" data-date="2016-09-26" onclick="goToProductPage('Gumball_Cookie.html')">
+                <img class="default" src="image/Gumball_Cookie.webp" alt="Ginger Gumball" />
+                <img class="hover" src="image/Gumball_Cookie2.webp" alt="Ginger Gumball2" />
+                <p>泡泡糖餅乾</p>
+                <span class="price">NT$45</span>
+            </div>
+            <div class="item" flavors-candy="true" data-date="2021-11-12" onclick="goToProductPage('Sugar_Glass_Cookie.html')">
+                <img class="default" src="image/Sugar_Glass_Cookie.webp" alt="Ginger Sugar_Glass"/>
+                <img class="hover" src="image/Sugar_Glass_Cookie2.webp" alt="Ginger Sugar_Glass2"/>
+                <p>糖玻璃餅乾</p>
+                <span class="price">NT$50</span>
+            </div>
+            <div class="item" flavors-candy="true" data-date="2019-02-13" onclick="goToProductPage('Cotton_Candy_Cookie.html')">
+                <img class="default" src="image/Cotton_Candy_Cookie.webp" alt="Ginger Cotton_Candy" />
+                <img class="hover" src="image/Cotton_Candy_Cookie2.webp" alt="Ginger Cotton_Candy2" />
+                <p>棉花糖餅乾</p>
+                <span class="price">NT$40</span>
+            </div>
+            <!-- 下一行 -->
+            <div class="item" flavors-candy="true" data-date="2023-08-29" onclick="goToProductPage('Okchun_Cookie.html')">
+                <img class="default" src="image/Okchun_Cookie.webp" alt="Ginger Okchun"/>
+                <img class="hover" src="image/Okchun_Cookie2.webp" alt="Ginger Okchun2"/>
+                <p>王春糖餅乾</p>
+                <span class="price">NT$55</span>
+            </div>
+            <div class="item" flavors-drinks="true" data-date="2016-09-26" onclick="goToProductPage('Soda_Cookie.html')">
+                <img class="default" src="image/Soda_Cookie.webp" alt="Ginger Soda" />
+                <img class="hover" src="image/Soda_Cookie2.webp" alt="Ginger Soda2" />
+                <p>汽水餅乾</p>
+                <span class="price">NT$45</span>
+            </div>
+            <div class="item" flavors-drinks="true" data-date="2024-07-26" onclick="goToProductPage('Cream_Soda_Cookie.html')">
+                <img class="default" src="image/Cream_Soda_Cookie.webp" alt="Ginger Cream_Soda"/>
+                <img class="hover" src="image/Cream_Soda_Cookie2.webp" alt="Ginger Cream_Soda2"/>
+                <p>奶油蘇打餅乾</p>
+                <span class="price">NT$50</span>
+            </div>
+            <!-- 下一行 -->
+            <div class="item" flavors-drinks="true" data-date="2024-08-13" onclick="goToProductPage('Cherry_Cola_Cookie.html')">
+                <img class="default" src="image/Cherry_Cola_Cookie.webp" alt="Ginger Cherry_Cola"/>
+                <img class="hover" src="image/Cherry_Cola_Cookie2.webp" alt="Ginger Cherry_Cola2"/>
+                <p>櫻桃可樂餅乾</p>
+                <span class="price">NT$50</span>
+            </div>
+            <div class="item" flavors-drinks="true" data-date="2023-09-26" onclick="goToProductPage('Blue_Slushy_Cookie.html')">
+                <img class="default" src="image/Blue_Slushy_Cookie.webp" alt="Ginger Blue_Slushy"/>
+                <img class="hover" src="image/Blue_Slushy_Cookie2.webp" alt="Ginger Blue_Slushy2"/>
+                <p>蘇打冰沙餅乾</p>
+                <span class="price">NT$50</span>
+            </div>
+            <div class="item" flavors-drinks="true" data-date="2016-11-30" onclick="goToProductPage('Cocoa_Cookie.html')">
+                <img class="default" src="image/Cocoa_Cookie.webp" alt="Ginger Cocoa" />
+                <img class="hover" src="image/Cocoa_Cookie2.webp" alt="Ginger Cocoa2" />
+                <p>可可餅乾</p>
+                <span class="price">NT$45</span>
+            </div>
+            <!-- 下一行 -->
+            <div class="item" flavors-chocolate="true" data-date="2016-10-24" onclick="goToProductPage('Mint_Choco_Cookie.html')">
+                <img class="default" src="image/Mint_Choco_Cookie.webp" alt="Ginger Mint_Choco" />
+                <img class="hover" src="image/Mint_Choco_Cookie2.webp" alt="Ginger Mint_Choco2" />
+                <p>薄荷巧克力餅乾</p>
+                <span class="price">NT$45</span>
+            </div>
+            <div class="item" flavors-chocolate="true" data-date="2016-09-26" onclick="goToProductPage('Dark_Choco_Cookie.html')">
+                <img class="default" src="image/Dark_Choco_Cookie.webp" alt="Ginger Dark_Choco" />
+                <img class="hover" src="image/Dark_Choco_Cookie2.webp" alt="Ginger Dark_Choco2" />
+                <p>黑巧克力餅乾</p>
+                <span class="price">NT$40</span>
+            </div>
+            <div class="item" flavors-special="true" data-date="2016-11-30" onclick="goToProductPage('Herb_Cookie.html')">
+                <img class="default" src="image/Herb_Cookie.webp" alt="Ginger Herb"/>
+                <img class="hover" src="image/Herb_Cookie2.webp" alt="Ginger Herb2"/>
+                <p>藥草餅乾</p>
+                <span class="price">NT$60</span>
+            </div>
+            <!-- 下一行 -->
+            <div class="item" flavors-special="true" data-date="2018-08-30" onclick="goToProductPage('Squid_Ink_Cookie.html')">
+                <img class="default" src="image/Squid_Ink_Cookie.webp" alt="Ginger Squid_Ink"/>
+                <img class="hover" src="image/Squid_Ink_Cookie2.webp" alt="Ginger Squid_Ink2"/>
+                <p>墨魚餅乾</p>
+                <span class="price">NT$60</span>
+            </div>
+            <div class="item" flavors-special="true" data-date="2019-07-29" onclick="goToProductPage('Yogurt_Cream_Cookie.html')">
+                <img class="default" src="image/Yogurt_Cream_Cookie.webp" alt="Ginger Yogurt_Cream"/>
+                <img class="hover" src="image/Yogurt_Cream_Cookie2.webp" alt="Ginger Yogurt_Cream2"/>
+                <p>優格鮮奶油餅乾</p>
+                <span class="price">NT$50</span>
+            </div>
+            <div class="item" flavors-special="true" data-date="2024-06-10" onclick="goToProductPage('Flat_Tofu_Cookie.html')">
+                <img class="default" src="image/Flat_Tofu_Cookie.webp" alt="Ginger Flat_Tofu"/>
+                <img class="hover" src="image/Flat_Tofu_Cookie2.webp" alt="Ginger Flat_Tofu2"/>
+                <p>豆皮餅乾</p>
+                <span class="price">NT$55</span>
+            </div>
+            <!-- 下一行 -->
+            <div class="item" flavors-special="true" data-date="2016-09-26" onclick="goToProductPage('Pistachio_Cookie.html')">
+                <img class="default" src="image/Pistachio_Cookie.webp" alt="Ginger Pistachio"/>
+                <img class="hover" src="image/Pistachio_Cookie2.webp" alt="Ginger Pistachio2"/>
+                <p>開心果餅乾</p>
+                <span class="price">NT$55</span>
+            </div>
+            <div class="item" data-festival-limited="true" data-date="2024-12-01" onclick="goToProductPage('Peppernut_Cookie.html')">
+                <img class="default" src="image/Peppernut_Cookie.webp" alt="Ginger Peppernut"/>
+                <img class="hover" src="image/Peppernut_Cookie2.webp" alt="Ginger Peppernut2"/>
+                <p>胡椒雪球餅乾</p>
+                <span class="price">NT$60</span>
+            </div>
+            <div class="item" data-festival-limited="true" data-date="2024-12-01" onclick="goToProductPage('Tiramisu_Cookie.html')">
+                <img class="default" src="image/Tiramisu_Cookie.webp" alt="Ginger Tiramisu"/>
+                <img class="hover" src="image/Tiramisu_Cookie2.webp" alt="Ginger Tiramisu2"/>
+                <p>提拉米蘇餅乾</p>
+                <span class="price">NT$60</span>
+            </div>
+            <!-- 下一行 -->
+            <div class="item" data-festival-limited="true" data-date="2024-12-01" onclick="goToProductPage('Pudding_Cookie.html')">
+                <img class="default" src="image/Pudding_Cookie.webp" alt="Ginger Pudding"/>
+                <img class="hover" src="image/Pudding_Cookie2.webp" alt="Ginger Pudding2"/>
+                <p>布丁餅乾</p>
+                <span class="price">NT$50</span>
+            </div>
+            <div class="item" data-festival-limited="true" data-date="2024-12-01" onclick="goToProductPage('Eggnog_Cookie.html')">
+                <img class="default" src="image/Eggnog_Cookie.webp" alt="Ginger Eggnog" />
+                <img class="hover" src="image/Eggnog_Cookie2.webp" alt="Ginger Eggnog2" />
+                <p>甜蛋飲餅乾</p>
+                <span class="price">NT$55</span>
+            </div>
+            <div class="item" data-festival-limited="true" data-date="2024-12-01" onclick="goToProductPage('Lollipop_Cookie.html')">
+                <img class="default" src="image/Lollipop_Cookie.webp" alt="Ginger Lollipop"/>
+                <img class="hover" src="image/Lollipop_Cookie2.webp" alt="Ginger Lollipop2"/>
+                <p>棒棒糖餅乾</p>
+                <span class="price">NT$50</span>
+            </div>
+            <!-- 下一行 -->
+            <div class="item" data-festival-limited="true" data-date="2024-12-01" onclick="goToProductPage('Stollen_Cookie.html')">
+                <img class="default" src="image/Stollen_Cookie.webp" alt="Ginger Stollen"/>
+                <img class="hover" src="image/Stollen_Cookie2.webp" alt="Ginger Stollen2"/>
+                <p>史多倫麵包餅乾</p>
+                <span class="price">NT$55</span>
+            </div>
+        </main>
+
+
+
+    </div><!-- 整個頁面的容器 -->
+
+    <footer>
+        <br>
+        <a href="#pagehead">回頁首</a>
+        <br>
+        <div class="hello">
+            <p style="color: white;">品牌名稱｜薑餅出桃股份有限公司&nbsp;&nbsp;統編991016</p>
+            <p style="color: white;">客服專線：0920201119&nbsp;&nbsp;時間00:00～23:59</p>
+        </div>
+        <div class="hello">
+            <p style="color: white;">地址：薑餅區聖誕市糖霜路新手巷3號</p>
+            <p style="color: white;">客服信箱：cookierun@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+    </footer>
+
+    <!-- 正確的 JavaScript 引入方式 -->
+    <script src="js/All products.js"></script>
+</body>
+</html>
+

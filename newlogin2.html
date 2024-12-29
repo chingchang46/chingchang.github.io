@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊會員 - 第二步</title>
+    <style>
+        @import url(css/newlogin2.css);
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <img src="image/a2.png" alt="薑餅人圖案">
+        <h1>填寫收件資訊</h1>
+        <p style="text-align: center;">請輸入你的個人資料！</p>
+        <form>
+            <!-- 用戶名稱 -->
+            <div class="form-group">
+                <label for="username">用戶名</label>
+                <input type="text" id="username" placeholder="請輸入用戶名" required>
+            </div>
+
+            <!-- 密碼 -->
+            <div class="form-group">
+                <label for="password">密碼</label>
+                <input type="password" id="password" placeholder="請輸入密碼" required>
+            </div>
+
+            <!-- 性別選擇 -->
+            <div class="form-group">
+                <label for="gender">性別 (選填)</label>
+                <select id="gender">
+                    <option value="">請選擇性別</option>
+                    <option value="male">男</option>
+                    <option value="female">女</option>
+                    <option value="other">其他</option>
+                </select>
+            </div>
+
+            <!-- 出生日期 -->
+            <div class="form-group">
+                <label for="birthday">生日 (選填)</label>
+                <div class="birthday-inputs">
+                    <select id="year">
+                        <option value="">年</option>
+                        <!-- 動態生成年選項 -->
+                        <script>
+                            const currentYear = new Date().getFullYear();
+                            for (let i = currentYear; i >= 1900; i--) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                    <select id="month">
+                        <option value="">月</option>
+                        <script>
+                            for (let i = 1; i <= 12; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                    <select id="day">
+                        <option value="">日</option>
+                        <script>
+                            for (let i = 1; i <= 31; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 完成註冊按鈕 -->
+            <button type="submit" onclick="location.href='newlogin3.html';"class="btn-next">下一步</button>
+        </form>
+    </div>
+</body>
+</html>

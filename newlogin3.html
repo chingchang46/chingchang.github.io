@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>填寫收件資訊</title>
+    <style>
+        @import url('css/newlogin3.css'); 
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <img src="image/a2.png" alt="薑餅人圖案">
+        <h1>填寫收件資訊</h1>
+        <p style="text-align: center;">請輸入收件資訊以完成註冊流程！</p>
+        <form>
+            <label for="password">收件人姓名</label>
+            <input type="text" placeholder="請輸入收件人姓名" required>
+            
+            <label for="password">收件人電話</label>
+            <input type="tel" placeholder="0912345678" pattern="[0-9]{10}" required>
+            
+            <label for="password">收貨地址</label>
+            <textarea placeholder="XX市XX區XXX路XX號" rows="3" required></textarea>
+            
+            <div class="button-group">
+                <button type="button" onclick="location.href='login.html'"; class="btn-complete">
+                    完成註冊
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
