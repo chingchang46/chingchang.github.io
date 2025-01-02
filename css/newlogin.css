@@ -70,7 +70,7 @@ input[type="checkbox"] {
     color: #5e463a;
 }
 
-.btn-next {
+.btn-next{
     font-size: 20px;
     line-height: 40px;
     background-color: #d2691e; 
@@ -81,7 +81,7 @@ input[type="checkbox"] {
     cursor: pointer; 
 }
 
-.btn-next:hover {
+.btn-next:hover{
     background-color: #b85818;
     color: white; 
 }

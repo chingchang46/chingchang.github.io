@@ -69,17 +69,18 @@ select {
     flex: 1;
 }
 
-.btn-next {
-    background-color: #d2691e;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
+.btn-next, .btn-pre{
+    font-size: 20px;
+    line-height: 40px;
+    background-color: #d2691e; 
+    color: white; 
+    border-radius: 5%;
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
 }
 
-.btn-next:hover {
+.btn-next:hover, .btn-pre:hover{
     background-color: #b85818;
+    color: white; 
 }

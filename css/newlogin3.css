@@ -64,25 +64,19 @@ textarea {
     margin-top: 20px;
 }
 
- .btn-next {
-    font-size: 18px;
-    padding: 10px 20px;
-    border: none;
+.btn-complete, .btn-pre{
+    font-size: 20px;
+    line-height: 40px;
+    background-color: #d2691e; 
+    color: white; 
     border-radius: 5%;
-    cursor: pointer;
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
 }
 
-.btn-complete {
-    background-color: #d2691e;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.btn-complete:hover {
+.btn-complete:hover, .btn-pre:hover{
     background-color: #b85818;
+    color: white; 
 }
+
