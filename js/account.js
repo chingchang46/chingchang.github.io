@@ -1,13 +1,17 @@
+
+  
 // 在頁面加載時隱藏所有星星評分區域及「味道」標題
 window.addEventListener('DOMContentLoaded', () => {
-    const starRatings = document.querySelectorAll('.star'); // 找到所有的星星區域
-    const tasteTitles = document.querySelectorAll('h2'); // 找到所有 <h2> 標題
-    const priceTitles = document.querySelectorAll('h2'); // 找到所有 <h2> 標題
-    const lookTitles = document.querySelectorAll('h2'); // 找到所有 <h2> 標題
-    const adviceTitles = document.querySelectorAll('h2'); // 找到所有 <h2> 標題
+    const starRatings = document.querySelectorAll('.think .star'); // 找到所有的星星區域
+    const tasteTitles = document.querySelectorAll('.think h2'); // 找到所有 <h2> 標題
+    const priceTitles = document.querySelectorAll('.think h2'); // 找到所有 <h2> 標題
+    const lookTitles = document.querySelectorAll('.think h2'); // 找到所有 <h2> 標題
+    const allTitles = document.querySelectorAll('.think h2'); // 找到所有 <h2> 標題
+    const adviceTitles = document.querySelectorAll('.think h2'); // 找到所有 <h2> 標題
     starRatings.forEach(rating => {
         rating.style.display = 'none'; // 隱藏所有星星區域
     });
+
 
     tasteTitles.forEach(title => {
         // 隱藏 "味道" 標題，通過檢查標題內容是否為 "味道"
@@ -30,6 +34,13 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    allTitles.forEach(title => {
+        // 隱藏 "整體" 標題，通過檢查標題內容是否為 "整體"
+        if (title.textContent.includes('整體')) {
+            title.style.display = 'none'; // 隱藏整體的標題
+        }
+    });
+
     adviceTitles.forEach(title => {
         // 隱藏 "評論" 標題，通過檢查標題內容是否為 "評論"
         if (title.textContent.includes('評論')) {
@@ -37,6 +48,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
 
 
 // First modal - 獲取第一個彈跳視窗和相關按鈕
@@ -177,40 +190,48 @@ finishButton.addEventListener('click', () => {
         }
 
         // 顯示星星評分區域
-        const starRatings = document.querySelectorAll('.star');
+        const starRatings = document.querySelectorAll('.think .star');
         starRatings.forEach(rating => {
             rating.style.display = 'block'; // 顯示所有星星區域
         });
 
         // 顯示「味道」標題
-        const tasteTitles = document.querySelectorAll('h2');
+        const tasteTitles = document.querySelectorAll('.think h2');
         tasteTitles.forEach(title => {
             if (title.textContent.includes('味道')) {
-                title.style.display = 'flex'; // 顯示「味道」標題
+                title.style.display = 'block'; // 顯示「味道」標題
             }
         });
 
         // 顯示「外型」標題
-        const lookTitles = document.querySelectorAll('h2');
+        const lookTitles = document.querySelectorAll('.think h2');
         lookTitles.forEach(title => {
             if (title.textContent.includes('外型')) {
-                title.style.display = 'flex'; // 顯示「外型」標題
+                title.style.display = 'block'; // 顯示「外型」標題
             }
         });
 
         // 顯示「價格」標題
-        const priceTitles = document.querySelectorAll('h2');
+        const priceTitles = document.querySelectorAll('.think h2');
         priceTitles.forEach(title => {
             if (title.textContent.includes('價格')) {
-                title.style.display = 'flex'; // 顯示「價格」標題
+                title.style.display = 'block'; // 顯示「價格」標題
+            }
+        });
+
+        // 顯示「整體」標題
+        const allTitles = document.querySelectorAll('.think h2');
+        allTitles.forEach(title => {
+            if (title.textContent.includes('整體')) {
+                title.style.display = 'block'; // 顯示「整體」標題
             }
         });
 
         // 顯示「評論」標題
-        const adviceTitles = document.querySelectorAll('h2');
-        priceTitles.forEach(title => {
+        const adviceTitles = document.querySelectorAll('.think h2');
+        adviceTitles.forEach(title => {
             if (title.textContent.includes('評論')) {
-                title.style.display = 'flex'; // 顯示「評論」標題
+                title.style.display = 'block'; // 顯示「評論」標題
             }
         });
         
